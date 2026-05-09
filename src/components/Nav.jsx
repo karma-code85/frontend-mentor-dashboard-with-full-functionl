@@ -2,7 +2,11 @@ import { useState } from "react";
 
 export default function Nav(){
     const [isOpen , setIsOpen]=useState(false)
-    const [isOpenIcon ,setIsOpenIcon]=useState(false)
+    const [activeMenu ,setActiveMenu]=useState(null)
+
+    function handletoggleMenu(menuName){
+      setActiveMenu(activeMenu === menuName?null :menuName)
+    }
 
 
   return(
@@ -17,18 +21,16 @@ export default function Nav(){
         )}
 
 
-        <div className="absolute  top-full w-full z-20 mt-4 w-full">
+        <div className="absolute  top-full w-full z-20 mt-4 w-full ">
         {isOpen &&(
           <div className=" bg-white shadow-lg p-4 space-y-4  ">
-            <div className="flex justify-between items-center" onClick={()=>setIsOpenIcon(!isOpenIcon)}>
+            <div className="flex justify-between items-center" onClick={()=>handletoggleMenu('explore')}>
             <p>EXPLORE</p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className={`transition-transform ${activeMenu==='explore' ? 'rotate-90':''} lucide lucide-chevron-right-icon lucide-chevron-right`}><path d="m9 18 6-6-6-6"/></svg>
             </div>
-            {isOpenIcon&&(
+            {activeMenu==='explore' &&(
               <div className="p-4 list-none space-y-4">
-                <li>
-                  LEARNAING PATH
-                  </li>
+                <li>  LEARNAING PATH </li>
                 <li>CHALLENGES</li>
                 <li>SOLUTIONS</li>
                 <li>ARICALS</li>
@@ -36,11 +38,11 @@ export default function Nav(){
               </div>
             )}
 
-            <div className=" flex justify-between items-center" onClick={()=>setIsOpenIcon(!isOpenIcon)}>
+            <div className=" flex justify-between items-center" onClick={()=>handletoggleMenu('for companies')} >
             <p>FOR COMPANIES</p>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  className={`transition-transform ${activeMenu ==='for companies' ?'rotate-90':''} lucide lucide-chevron-right-icon lucide-chevron-right`}><path d="m9 18 6-6-6-6"/></svg>
             </div>
-            {isOpenIcon &&(
+            {activeMenu==='for companies' &&(
               <div className="p-4 list-none space-y-4">
                 <li>HIRE DEVELOPERS</li>
                 <li>TRAIN DEVELOPERS</li>
