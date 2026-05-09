@@ -1,11 +1,22 @@
 import { useState } from "react";
 import Nav from "./components/Nav";
 import { FaGithub } from "react-icons/fa";
+import Youtube from "./components/Youtuber";
+import Company from "./components/CompanyAddress";
+import SummaryDeailes from "./components/SummaryDetails";
+
+
+
 
 
 
 export default function App(){
   const [isOpen , setIsOpen]=useState(false)
+  const [imageOpen, setImageOpen]=useState(1)
+
+  const images=["home-how-it-works-3.webp","home-how-it-works-4 (1).webp","home-how-it-works-3.webp", "home-how-it-works-4 (1).webp"]
+
+
 
   return(
     <div className="min-h-screen max-sm space-y-10 p-6">
@@ -27,9 +38,39 @@ export default function App(){
         <p className="text-gray-400">Join thousands of developers getting personalized insights with every submission to level up faster. </p>
         <button className="bg-white p-2 rounded-full text-blue-800 text-center w-full">LEARN ABOUT PRO</button>
       </div>
+      <div>{/*the youtuber container */}
+        <Youtube text={"I highly recommend Frontend Mentor. Skip the search for project ideas and dive into ready-made challenges that help you level up as a developer."}
+        url="/images/image-avatar.png"
+        name={"Kevin Powell"}
+        jop={"Web Developer & YouTuber"}
+        />
       </div>
+       <div>{/*the youtuber container */}
+        <Youtube text={"Frontend Mentor is a win-win. You can sharpen your skills building websites and add finished projects to your portfolio to help land a job!"}
+        url="/images/home-hero.webp"
+        name={"Jessica Chan"}
+        jop={"Web Developer & YouTuber"}
+        />
+      </div>
+      <p className="text-center font-extrabold text-lg ">AS FEATURED ON ....</p>
+      <div className="space-y-6">
+        <Company url={"/images/logo-css-tricks.svg"} />
+        <Company url={"/images/logo-stack-overflow.svg"}/>
+        <Company url={"/images/logo-product-hunt.svg"}/>
+      </div>
+      <div className="bg-gray-100 rounded-lg p-4  space-y-6">{/*for the how it work containr  */}
+        <h1 className="text-lg font-semibold">HOW IT'S WORK</h1>
+        <div className="space-y-6">
+          <img src="/images/home-how-it-works-3.webp" alt="" />
+          
+          <SummaryDeailes number={1} text={"Choose you challenges"}/>
+          <SummaryDeailes number={2} text={"Code the design"}/>
+          <SummaryDeailes number={3} text={"Submit and improve"}/>
+          <SummaryDeailes number={3} text={"Help other grow"}/>
 
-
+        </div>
+      </div>
+      </div>
 
     </div>
   )
