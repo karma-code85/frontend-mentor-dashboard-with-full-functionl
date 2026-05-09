@@ -1,9 +1,13 @@
 import { useState } from "react";
 import Nav from "./components/Nav";
-import { FaGithub } from "react-icons/fa";
+import { FaBook, FaCode, FaRegComment, FaGithub } from "react-icons/fa";
 import Youtube from "./components/Youtuber";
 import Company from "./components/CompanyAddress";
 import SummaryDeailes from "./components/SummaryDetails";
+import DeveloperLikeFrontend from "./components/DevelperLikeFrontend";
+import FastTrack from "./components/FastTrackPro";
+
+
 
 
 
@@ -61,14 +65,65 @@ export default function App(){
       <div className="bg-gray-100 rounded-lg p-4  space-y-6">{/*for the how it work containr  */}
         <h1 className="text-lg font-semibold">HOW IT'S WORK</h1>
         <div className="space-y-6">
-          <img src="/images/home-how-it-works-3.webp" alt="" />
-          
-          <SummaryDeailes number={1} text={"Choose you challenges"}/>
-          <SummaryDeailes number={2} text={"Code the design"}/>
+          <img src={`/images/${images[imageOpen-1]}`} alt="" />
+
+          <details>
+            <summary>
+             <SummaryDeailes number={1} text={"Choose you challenges"}
+             onclick={()=>setImageOpen(1)}
+             />
+            </summary>
+
+          </details>
+          <SummaryDeailes number={2} text={"Code the design"} onclick={()=>setImageOpen}/>
           <SummaryDeailes number={3} text={"Submit and improve"}/>
           <SummaryDeailes number={3} text={"Help other grow"}/>
-
         </div>
+      </div>
+      <div className="space-y-8">{/*for the why developer like frontend mentor */}
+        <h1 className="text-center text-2xl">Why developers choose Frontend Mentor</h1>
+        <DeveloperLikeFrontend
+        url={"/images/home-why-1111.webp"}
+        head={"Move beyond passive learning"}
+        paragrph={"Stop watching and start creating. Build professional-quality projects that develop genuine coding skills through hands-on practice."}
+        />
+        <DeveloperLikeFrontend
+        url={"/images/home-why-2222.webp"}
+        head={"Create a portfolio that gets you hired"}
+        paragrph={"Build impressive projects with professional designs. Recruiters tell us these portfolio pieces consistently wow them in interviews by demonstrating real-world capabilities."}
+        />
+        <DeveloperLikeFrontend
+        url={"/images/home-why-33333.webp"}
+        head={"Master AI-powered development workflows"}
+        paragrph={"Practice with AI tools that 76% of developers use daily. Learn to work effectively with Cursor, GitHub Copilot, ChatGPT, and other assistants while maintaining code quality and problem-solving skills."}
+        />
+        <DeveloperLikeFrontend
+        url={"/images/home-why-44444.webp"}
+        head={"Join a supportive developer community"}
+        paragrph={"Connect with peers for code reviews, career advice, and friendship. Beat imposter syndrome alongside developers who understand your journey, guided by mentors who've walked this path."}
+        />
+      </div>
+      <div className="space-y-6">{/*for the fast-track PRO */}
+        <h1>Fast-track your develper career with <button>PRO</button></h1>
+        <p>Get AI-powered feedback on every solution, build portfolio-worthy projects, and master professional workflows with complete Figma files—everything you need to level up faster.</p>
+        <FastTrack
+        icon={<FaRegComment className="size-10 "/>}
+        title={"Level up faster with AI-powered feedback"}
+        paragraph={"Our AI-enhanced reports spot up to 3x more improvement opportunities on every submission, giving you personalized insights that help you level up faster."}
+        />
+
+        <FastTrack
+        icon={<FaBook className="size-10"/>}
+        title={"Build portfolio projects that get you hired"}
+        paragraph={"Create multi-page websites, interactive dashboards, and full-stack applications with premium challenges that make your portfolio stand out to employers."}
+        />
+
+        <FastTrack
+        icon={<FaCode className="size-10 text-center"/>}
+        title={"Master the design-to-code workflow pros use"}
+        paragraph={"Learn to translate Figma designs into pixel-perfect code using the same detailed specs and professional workflow that developers use in real teams."}
+        />
+
       </div>
       </div>
 
