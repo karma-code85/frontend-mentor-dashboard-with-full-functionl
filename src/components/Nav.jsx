@@ -23,13 +23,13 @@ export default function Nav(){
 
         <div className="absolute  top-full w-full z-20 mt-4 w-full ">
         {isOpen &&(
-          <div className=" bg-white shadow-lg p-4 space-y-4  ">
+          <div className=" bg-white shadow-lg p-4 space-y-4  divide-y divide-gray-300  ">
             <div className="flex justify-between items-center" onClick={()=>handletoggleMenu('explore')}>
             <p>EXPLORE</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className={`transition-transform ${activeMenu==='explore' ? 'rotate-90':''} lucide lucide-chevron-right-icon lucide-chevron-right`}><path d="m9 18 6-6-6-6"/></svg>
             </div>
             {activeMenu==='explore' &&(
-              <div className="p-4 list-none space-y-4">
+              <div className="p-4 list-none space-y-4 divide-y divide-gray-200">
                 <li>  LEARNAING PATH </li>
                 <li>CHALLENGES</li>
                 <li>SOLUTIONS</li>
@@ -43,12 +43,12 @@ export default function Nav(){
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  className={`transition-transform ${activeMenu ==='for companies' ?'rotate-90':''} lucide lucide-chevron-right-icon lucide-chevron-right`}><path d="m9 18 6-6-6-6"/></svg>
             </div>
             {activeMenu==='for companies' &&(
-              <div className="p-4 list-none space-y-4">
+              <div className="p-4 list-none space-y-4 divide-y divide-gray-200 ">
                 <li>HIRE DEVELOPERS</li>
                 <li>TRAIN DEVELOPERS</li>
               </div>
             )}
-            <p>UNLOCK <span>PRO</span></p>
+            <p>UNLOCK <span className=" font-bold text-white rounded px-2 py-1 bg-blue-800">PRO</span></p>
 
           </div>
         )}
