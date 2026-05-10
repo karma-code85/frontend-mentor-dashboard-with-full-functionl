@@ -6,6 +6,8 @@ import Company from "./components/CompanyAddress";
 import SummaryDeailes from "./components/SummaryDetails";
 import DeveloperLikeFrontend from "./components/DevelperLikeFrontend";
 import FastTrack from "./components/FastTrackPro";
+import Payment from "./components/paymentSubscrbation";
+
 
 
 
@@ -123,8 +125,22 @@ export default function App(){
         title={"Master the design-to-code workflow pros use"}
         paragraph={"Learn to translate Figma designs into pixel-perfect code using the same detailed specs and professional workflow that developers use in real teams."}
         />
-
       </div>
+      <div className="rounded-full p-1 w-[75%] flex items-center bg-white shadow border w-sm justify-between text-sm ">
+        <button className="bg-blue-900 text-white font-bold rounded-full p-2">
+          FOR INDIVIDUALS
+        </button>
+        <button className="p-2 font-bold items-start">
+          FOR TEAMS
+        </button>
+      </div>
+      <Payment
+      subDate={"monthly"}
+      deletedDate={12}
+      datePerMonth={6}
+      describtion={"buildMonthly"}
+      
+      />
       </div>
 
     </div>
