@@ -7,6 +7,8 @@ import SummaryDeailes from "./components/SummaryDetails";
 import DeveloperLikeFrontend from "./components/DevelperLikeFrontend";
 import FastTrack from "./components/FastTrackPro";
 import Payment from "./components/paymentSubscrbation";
+import CardFroPayment from "./components/CardForPayment";
+
 
 
 
@@ -21,6 +23,10 @@ export default function App(){
   const [imageOpen, setImageOpen]=useState(1)
 
   const images=["home-how-it-works-3.webp","home-how-it-works-4 (1).webp","home-how-it-works-3.webp", "home-how-it-works-4 (1).webp"]
+  const monthlyBills=["Free challenges", "AI-powered solution feedback", "5 Figma design files/month", "2 premium challenges/month", "Private solutions","Custom solution domains","View challenges solutions early"]
+  const yearlyBills=["Free challenges","AI-powered solution feedback","Unlimited Figma design files","Unlimited premium challenges","Private solutions", "Custom solution domains", "View challenges solutions early"]
+
+
 
 
 
@@ -138,10 +144,21 @@ export default function App(){
       subDate={"monthly"}
       deletedDate={12}
       datePerMonth={6}
-      describtion={"buildMonthly"}
-      
+      describtion={"Billed monthly"}
+      listVal={monthlyBills}
+      />
+      <Payment
+      subDate={"yearly"}
+      deletedDate={8}
+      datePerMonth={4}
+      describtion={"$48 billed yearly (save 33% vs monthly"}
+      listVal={yearlyBills}
       />
       </div>
+      <div>
+        <CardFroPayment/>
+      </div>
+      <h1>For comapniesd</h1>
 
     </div>
   )
