@@ -8,10 +8,7 @@ import DeveloperLikeFrontend from "./components/DevelperLikeFrontend";
 import FastTrack from "./components/FastTrackPro";
 import Payment from "./components/paymentSubscrbation";
 import CardFroPayment from "./components/CardForPayment";
-
-
-
-
+import ForCompainesCard from "./components/ForCompainesCard";
 
 
 
@@ -158,7 +155,22 @@ export default function App(){
       <div>
         <CardFroPayment/>
       </div>
-      <h1>For comapniesd</h1>
+      <h1 className="text-lg font-bold tracking-widest">For comapnies</h1>
+      <ForCompainesCard
+      url={"home-teamsForCompanies.webp"}
+      subtitle={"Engineering teams"}
+      title={"Train junior developers with real projects"}
+      text={"Skip theoretical tutorials. Give your junior developers 100+ real-world challenges that build practical skills faster than traditional training programs."}
+      btn={"EXPLORE MORE"}
+      />
+      <ForCompainesCard
+      url={"home-hiringForComapnies2.webp"}
+      subtitle={"Hiring teams"}
+      title={"Discover junior talent through skills, not resumes"}
+      text={"See real code and live projects upfront, then connect directly with developers who've demonstrated the skills and passion you need."}
+      btn={"EXPLORE HIRING"}
+      />
+
 
     </div>
   )
