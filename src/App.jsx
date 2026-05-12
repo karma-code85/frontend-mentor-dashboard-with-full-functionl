@@ -12,6 +12,8 @@ import ForCompainesCard from "./components/ForCompainesCard";
 import CommunityTitle from "./components/CommunityTitle";
 import JoinCard from "./components/JoiningCard";
 import Contact from "./components/Contact";
+import HowItswork from "./components/HowItsWorkFunction";
+
 
 
 
@@ -70,7 +72,7 @@ export default function App(){
       </div>
       <div className="bg-gray-100 rounded-lg p-4  space-y-6">{/*for the how it work containr  */}
         <h1 className="text-lg font-semibold">HOW IT'S WORK</h1>
-        <div className="space-y-6">
+        {/* <div className="space-y-6">
           <img src={`/images/${images[imageOpen-1]}`} alt="" />
 
           <details>
@@ -84,7 +86,8 @@ export default function App(){
           <SummaryDeailes number={2} text={"Code the design"} onclick={()=>setImageOpen}/>
           <SummaryDeailes number={3} text={"Submit and improve"}/>
           <SummaryDeailes number={3} text={"Help other grow"}/>
-        </div>
+        </div> */}
+        <HowItswork/>
       </div>
       <div className="space-y-8">{/*for the why developer like frontend mentor */}
         <h1 className="text-center text-2xl">Why developers choose Frontend Mentor</h1>
