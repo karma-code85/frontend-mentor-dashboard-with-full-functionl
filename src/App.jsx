@@ -11,6 +11,7 @@ import CardFroPayment from "./components/CardForPayment";
 import ForCompainesCard from "./components/ForCompainesCard";
 import CommunityTitle from "./components/CommunityTitle";
 import JoinCard from "./components/JoiningCard";
+import Contact from "./components/Contact";
 
 
 
@@ -236,6 +237,29 @@ export default function App(){
       </div>
       <div>{/*join card */}
         <JoinCard/>
+      </div>
+      <div>{/*Contact container */}
+        <Contact/>
+      </div><hr />
+      <div className="">{/*footer */}
+        <footer className="space-y-4 ">
+          <span>© Frontend Mentor 2019 - 2026</span>
+          <ul className="flex justify-between text-gray-500">
+            <li>
+              <a href="">Terms</a>
+            </li>
+            <li>
+              <a href="">Cookies Policy</a>
+            </li>
+            <li>
+              <a href="">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="">license</a>
+            </li>
+          </ul>
+        </footer>
+
 
       </div>
 
