@@ -2,7 +2,7 @@ import { useState } from "react"
 
 
 export default function HowItswork(){
-  const [isActive, setIsActive]=useState(0)
+  const [isActive, setIsActive]=useState(1)
 
   const steps=[
     {
@@ -37,12 +37,12 @@ export default function HowItswork(){
       <img src={`/images/${steps[isActive].image}`} alt="" />
       <div  className="space-y-4">
         {steps.map((step,index)=>(
-          <div key={step.id} className={` p-4 rounded-lg border border-1 shadow  ${isActive===index ?
+          <div key={step.id} className={`transition-transform  p-4 rounded-lg border border-1 shadow  ${isActive===index ?
             "bg-blue-900 text-white":"bg-white"
           }`}
           onClick={()=>setIsActive(index)}
           >
-            <button className="flex gap-4"> <span className={`px-3 p-1 rounded-full ${isActive===index?"bg-white text-blue-800":"bg-sky-500 text-white"}`}>{step.id}</span>
+            <button className="flex gap-4"> <span className={`bg-sky-500  px-3 p-1 rounded-full ${isActive===index?"bg-white text-blue-800":"bg-sky-500 text-white"}`}>{step.id}</span>
             <h1 className="font-bold text-xl">{step.title}</h1>
             </button>
             {isActive === index &&(
