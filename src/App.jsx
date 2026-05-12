@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Nav from "./components/Nav";
-import { FaBook, FaCode, FaRegComment, FaGithub } from "react-icons/fa";
+import { FaBook, FaCode, FaRegComment, FaGithub ,FaArrowCircleRight,FaArrowCircleLeft } from "react-icons/fa";
 import Youtube from "./components/Youtuber";
 import Company from "./components/CompanyAddress";
 import SummaryDeailes from "./components/SummaryDetails";
@@ -9,6 +9,12 @@ import FastTrack from "./components/FastTrackPro";
 import Payment from "./components/paymentSubscrbation";
 import CardFroPayment from "./components/CardForPayment";
 import ForCompainesCard from "./components/ForCompainesCard";
+import CommunityTitle from "./components/CommunityTitle";
+import JoinCard from "./components/JoiningCard";
+
+
+
+
 
 
 
@@ -170,6 +176,69 @@ export default function App(){
       text={"See real code and live projects upfront, then connect directly with developers who've demonstrated the skills and passion you need."}
       btn={"EXPLORE HIRING"}
       />
+      <div className="p-4 bg-gray-100 rounded-lg border border-1">{/*little from the community */}
+        <h1>A little ❤️ from our community</h1>
+        <div className=" flex overflow-x-auto gap-4 items-center justify-center ">
+          <CommunityTitle
+          text={"This platform provides everything developers need to improve their skills. The community is great, and the challenges keep me motivated, instill accountability through regular submissions, and allow me to build a professional portfolio by showcasing diverse projects."}
+          url={"image-avatar.png"}
+          name={"Francesca"}
+          mail={"frrann"}
+          />
+          <CommunityTitle
+          text={"Frontend Mentor eliminated the hurdle of sourcing designs, letting me focus on development. Their professional projects, especially in the Pro subscription, challenge me to create complex, multi-page websites. With a supportive community and feedback from advanced programmers, my skills have been elevated to new heights."}
+          url={"image-avatar.png"}
+          name={"Alfie"}
+          mail={"alfiemitchell123"}
+          />
+          <CommunityTitle
+          text={"Frontend Mentor eliminated the hurdle of sourcing designs, letting me focus on development. Their professional projects, especially in the Pro subscription, challenge me to create complex, multi-page websites. With a supportive community and feedback from advanced programmers, my skills have been elevated to new heights."}
+          url={"image-avatar.png"}
+          name={"Alfie"}
+          mail={"alfiemitchell123"}
+          />
+          <CommunityTitle
+          text={"Frontend Mentor eliminated the hurdle of sourcing designs, letting me focus on development. Their professional projects, especially in the Pro subscription, challenge me to create complex, multi-page websites. With a supportive community and feedback from advanced programmers, my skills have been elevated to new heights."}
+          url={"image-avatar.png"}
+          name={"Alfie"}
+          mail={"alfiemitchell123"}
+          />
+          <CommunityTitle
+          text={"Frontend Mentor eliminated the hurdle of sourcing designs, letting me focus on development. Their professional projects, especially in the Pro subscription, challenge me to create complex, multi-page websites. With a supportive community and feedback from advanced programmers, my skills have been elevated to new heights."}
+          url={"image-avatar.png"}
+          name={"Alfie"}
+          mail={"alfiemitchell123"}
+          />
+          <CommunityTitle
+          text={"Frontend Mentor eliminated the hurdle of sourcing designs, letting me focus on development. Their professional projects, especially in the Pro subscription, challenge me to create complex, multi-page websites. With a supportive community and feedback from advanced programmers, my skills have been elevated to new heights."}
+          url={"image-avatar.png"}
+          name={"Alfie"}
+          mail={"alfiemitchell123"}
+          />
+          <CommunityTitle
+          text={"Frontend Mentor eliminated the hurdle of sourcing designs, letting me focus on development. Their professional projects, especially in the Pro subscription, challenge me to create complex, multi-page websites. With a supportive community and feedback from advanced programmers, my skills have been elevated to new heights."}
+          url={"image-avatar.png"}
+          name={"Alfie"}
+          mail={"alfiemitchell123"}
+          />
+          <CommunityTitle
+          text={"Frontend Mentor eliminated the hurdle of sourcing designs, letting me focus on development. Their professional projects, especially in the Pro subscription, challenge me to create complex, multi-page websites. With a supportive community and feedback from advanced programmers, my skills have been elevated to new heights."}
+          url={"image-avatar.png"}
+          name={"Alfie"}
+          mail={"alfiemitchell123"}
+          />
+        </div>
+        <div className="flex text-lg gap-4 items-center justify-center text-blue-800 text-[4rem]">
+          <FaArrowCircleLeft/>
+          <FaArrowCircleRight/>
+
+        </div>
+      </div>
+      <div>{/*join card */}
+        <JoinCard/>
+
+      </div>
+
 
 
     </div>
