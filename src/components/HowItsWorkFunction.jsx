@@ -2,7 +2,7 @@ import { useState } from "react"
 
 
 export default function HowItswork(){
-  const [isActive, setIsActive]=useState(1)
+  const [isActive, setIsActive]=useState(0)
 
   const steps=[
     {
@@ -43,7 +43,7 @@ export default function HowItswork(){
           onClick={()=>setIsActive(index)}
           >
             <button className="flex gap-4"> <span className={`bg-sky-500  px-3 p-1 rounded-full ${isActive===index?"bg-white text-blue-800":"bg-sky-500 text-white"}`}>{step.id}</span>
-            <h1 className="font-bold text-xl">{step.title}</h1>
+            <h1 className=" text-2xl">{step.title}</h1>
             </button>
             {isActive === index &&(
               <p className="mt-4 text-gray-400">{step.description}</p>

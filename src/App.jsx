@@ -6,13 +6,15 @@ import Company from "./components/CompanyAddress";
 import SummaryDeailes from "./components/SummaryDetails";
 import DeveloperLikeFrontend from "./components/DevelperLikeFrontend";
 import FastTrack from "./components/FastTrackPro";
-import Payment from "./components/paymentSubscrbation";
+// import Payment from "./components/paymentSubscrbation";
 import CardFroPayment from "./components/CardForPayment";
 import ForCompainesCard from "./components/ForCompainesCard";
 import CommunityTitle from "./components/CommunityTitle";
 import JoinCard from "./components/JoiningCard";
 import Contact from "./components/Contact";
 import HowItswork from "./components/HowItsWorkFunction";
+import MainButtonFortheTPaymentToggle from "./components/MainButtonForThePaymentToggle";
+
 
 
 
@@ -21,10 +23,15 @@ import HowItswork from "./components/HowItsWorkFunction";
 export default function App(){
   // const [isOpen , setIsOpen]=useState(false)
   const [imageOpen, setImageOpen]=useState(1)
+  const [ActivePayment, setActivePayment]=useState(null)
+
 
   const images=["home-how-it-works-3.webp","home-how-it-works-4 (1).webp","home-how-it-works-3.webp", "home-how-it-works-4 (1).webp"]
-  const monthlyBills=["Free challenges", "AI-powered solution feedback", "5 Figma design files/month", "2 premium challenges/month", "Private solutions","Custom solution domains","View challenges solutions early"]
-  const yearlyBills=["Free challenges","AI-powered solution feedback","Unlimited Figma design files","Unlimited premium challenges","Private solutions", "Custom solution domains", "View challenges solutions early"]
+
+
+   function handleToggledPayment(cardShow){
+    setActivePayment(ActivePayment===cardShow?null :cardShow)
+  }
 
 
 
@@ -72,11 +79,11 @@ export default function App(){
       </div>
       <div className="bg-gray-100 rounded-lg p-4  space-y-6">{/*for the how it work containr  */}
         <h1 className="text-lg font-semibold">HOW IT'S WORK</h1>
-        
+
         <HowItswork/>
       </div>
       <div className="space-y-8">{/*for the why developer like frontend mentor */}
-        <h1 className="text-center text-2xl">Why developers choose Frontend Mentor</h1>
+        <h1 className="text-center text-3xl text-sm ">Why developers choose Frontend Mentor</h1>
         <DeveloperLikeFrontend
         url={"/images/home-why-1111.webp"}
         head={"Move beyond passive learning"}
@@ -99,35 +106,32 @@ export default function App(){
         />
       </div>
       <div className="space-y-6">{/*for the fast-track PRO */}
-        <h1>Fast-track your develper career with <button>PRO</button></h1>
-        <p>Get AI-powered feedback on every solution, build portfolio-worthy projects, and master professional workflows with complete Figma files—everything you need to level up faster.</p>
+        <h1 className="text-center text-2xl tracking-widest">Fast-track your develper career with <button className="bg-blue-900 font-semibold text-white rounded-lg px-2 py-1">PRO</button></h1>
+        <p className="max-w-prose  text-neutral-500 text-lg">Get AI-powered feedback on every solution, build portfolio-worthy projects, and master professional workflows with complete Figma files—everything you need to level up faster.</p>
         <FastTrack
-        icon={<FaRegComment className="size-10 "/>}
+        icon={<FaRegComment className="size-10 mx-auto"/>}
         title={"Level up faster with AI-powered feedback"}
         paragraph={"Our AI-enhanced reports spot up to 3x more improvement opportunities on every submission, giving you personalized insights that help you level up faster."}
         />
 
         <FastTrack
-        icon={<FaBook className="size-10"/>}
+        icon={<FaBook className="size-10 mx-auto"/>}
         title={"Build portfolio projects that get you hired"}
         paragraph={"Create multi-page websites, interactive dashboards, and full-stack applications with premium challenges that make your portfolio stand out to employers."}
         />
 
         <FastTrack
-        icon={<FaCode className="size-10 text-center"/>}
+        icon={<FaCode className="size-10 text-center mx-auto"/>}
         title={"Master the design-to-code workflow pros use"}
         paragraph={"Learn to translate Figma designs into pixel-perfect code using the same detailed specs and professional workflow that developers use in real teams."}
         />
       </div>
-      <div className="rounded-full p-1 w-[75%] flex items-center bg-white shadow border w-sm justify-between text-sm ">
-        <button className="bg-blue-900 text-white font-bold rounded-full p-2">
-          FOR INDIVIDUALS
-        </button>
-        <button className="p-2 font-bold items-start">
-          FOR TEAMS
-        </button>
+
       </div>
-      <Payment
+
+      {/* <div>
+
+        <Payment
       subDate={"monthly"}
       deletedDate={12}
       datePerMonth={6}
@@ -141,7 +145,13 @@ export default function App(){
       describtion={"$48 billed yearly (save 33% vs monthly"}
       listVal={yearlyBills}
       />
+
+      </div> */}
+      <div>
+        <MainButtonFortheTPaymentToggle/>
       </div>
+
+
       <div>
         <CardFroPayment/>
       </div>
