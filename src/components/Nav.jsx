@@ -1,5 +1,11 @@
 import { useState } from "react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub ,FaUserTie,FaUserGraduate} from "react-icons/fa";
+import { PiPathLight ,PiCodeThin} from "react-icons/pi";
+import { FaComputer,FaNewspaper,FaBook } from "react-icons/fa6";
+import { IoLockOpenOutline } from "react-icons/io5";
+
+
+
 
 export default function Nav(){
     const [isOpen , setIsOpen]=useState(false)
@@ -30,12 +36,23 @@ export default function Nav(){
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className={`transition-transform ${activeMenu==='explore' ? 'rotate-90':''} lucide lucide-chevron-right-icon lucide-chevron-right`}><path d="m9 18 6-6-6-6"/></svg>
             </div>
             {activeMenu==='explore' &&(
-              <div className="p-4 list-none space-y-4 divide-y divide-gray-200">
-                <li>  LEARNAING PATH </li>
-                <li>CHALLENGES</li>
-                <li>SOLUTIONS</li>
-                <li>ARICALS</li>
-                <li>GUIDES</li>
+              <div className=" list-none space-y-4 divide-y divide-gray-200">
+                <li >
+                  <a href="" className="flex items-center gap-2"> <PiPathLight className="text-lg"/> LEARNAING PATH</a>
+
+               </li>
+                <li>
+                  <a href=""  className="flex items-center gap-2"> <FaComputer className="text-lg"/>CHALLENGES</a>
+                </li>
+                <li>
+                  <a href=""  className="flex items-center gap-2"> <PiCodeThin className="text-lg"/> SOLUTIONS</a>
+                </li>
+                <li>
+                  <a href="" className="flex items-center gap-2">A<FaNewspaper className="text-lg"/> RICALS</a>
+                </li>
+                <li>
+                  <a href="" className="flex items-center gap-2"><FaBook className="text-lg"/>GUIDES</a>
+                </li>
               </div>
             )}
 
@@ -44,20 +61,24 @@ export default function Nav(){
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  className={`transition-transform ${activeMenu ==='for companies' ?'rotate-90':''} lucide lucide-chevron-right-icon lucide-chevron-right`}><path d="m9 18 6-6-6-6"/></svg>
             </div>
             {activeMenu==='for companies' &&(
-              <div className="p-4 list-none space-y-4 divide-y divide-gray-200 ">
-                <li>HIRE DEVELOPERS</li>
-                <li>TRAIN DEVELOPERS</li>
+              <div className="list-none space-y-4 divide-y divide-gray-200 ">
+                <li>
+                  <a href="" className="flex items-center gap-2"><FaUserTie />HIRE DEVELOPERS</a>
+                </li>
+                <li>
+                  <a href="" className="flex items-center gap-2"><FaUserGraduate/>TRAIN DEVELOPERS</a>
+                </li>
               </div>
             )}
-            <p className="flex items-center gap-2 mt-4"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock-keyhole-open-icon lucide-lock-keyhole-open"><circle cx="12" cy="16" r="1"/><rect width="18" height="12" x="3" y="10" rx="2"/><path d="M7 10V7a5 5 0 0 1 9.33-2.5"/></svg>UNLOCK <span className=" font-bold text-white rounded px-2 py-1 bg-blue-800">PRO</span></p>
+            <p className="flex items-center gap-2 mt-4"> <a href="" className="flex items-center gap-2"> <IoLockOpenOutline/>UNLOCK <span className=" font-bold text-white rounded px-2 py-1 bg-blue-800">PRO</span></a></p>
 
           </div>
         )}
         </div>
         <img src="./images/favicon-32x32.png" alt="" />
       </div>
-      <button className="bg-black p-2 rounded-full text-white font-bold text-sm w-1/2 flex gap-4 items-center justify-center">
-        LOG IN <FaGithub/>
+      <button className="bg-black p-2 rounded-full text-white font-bold text-sm w-1/2 flex justify-center ">
+       <a href="https://www.frontendmentor.io/home" className="flex gap-4 items-center justify-center"> LOG IN <FaGithub/></a>
       </button>
     </div>
   )
