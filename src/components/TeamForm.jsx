@@ -12,7 +12,7 @@ export default function TeamCard({forTeam, activeButtonToggle}){
             <p>Frontend Mentor for Team</p>
             <p>Onboard new hires faster and train team members more effectively through hands-on practice. All team members gain unlimited Pro access, and admins can easily oversee and manage the team.</p>
             <button className="bg-rose-500 rounded-full text-white  hover:bg-rose-700 text-center p-2">LEARN MORE</button>
-            <div className="w-full border border-1 p-2"></div>
+            <div className="w-full border border-1 "></div>
             <h1>Teams</h1>
             <del>$12.50/seat/mo</del>
             <h1>$6.25/seat/mo</h1>
