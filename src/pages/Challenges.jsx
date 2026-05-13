@@ -3,12 +3,14 @@ import Nav from "../components/Nav"
 import LayoutHeroNav from "../components/LayoutForTheHeroNav"
 import Contact from "../components/Contact"
 import { IoCheckmarkOutline } from "react-icons/io5";
+// import { challenges } from "../dataChallenges";
 
 
 
 
 
-export default function Challenges({url, title, html, css, js, rate}){
+
+export default function Challenges({img, title, id, classRange,technologies,text}){
   return(
     <div className="p-4 space-y-4">
       <Nav/>
