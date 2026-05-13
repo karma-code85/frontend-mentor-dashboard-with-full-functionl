@@ -6,17 +6,17 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 
 export default function Contact(){
   return(
-    <div className="space-y-8">
+    <div className="space-y-8 p-4">
       <div className="space-y-6">
       <div className="flex items-center ">
         <img src="/images/favicon-32x32.png" alt="" />
         <h1 className="font-bold text-2xl">Frontend mentor</h1>
       </div>
       <div className="flex gap-4 text-sky-500 text-2xl">
-        <FaDiscord/>
-        <FaSquareXTwitter/>
-        <FaLinkedin/>
-        <FaFacebook/>
+        <a href="https://discord.com/invite/UAfh3qzhYb"><FaDiscord/></a>
+        <a href="https://x.com/frontendmentor"><FaSquareXTwitter/></a>
+        <a href="https://www.linkedin.com/company/frontend-mentor"><FaLinkedin/></a>
+        <a href="https://m.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Ffrontendmentor"><FaFacebook/></a>
       </div>
       </div>
 

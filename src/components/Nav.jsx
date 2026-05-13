@@ -3,6 +3,9 @@ import { FaGithub ,FaUserTie,FaUserGraduate} from "react-icons/fa";
 import { PiPathLight ,PiCodeThin} from "react-icons/pi";
 import { FaComputer,FaNewspaper,FaBook } from "react-icons/fa6";
 import { IoLockOpenOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import LearnPath from "../pages/LearnPathPage";
+
 
 
 
@@ -17,7 +20,7 @@ export default function Nav(){
 
 
   return(
-    <div className="flex justify-between ">
+    <div className="flex justify-between p-4 ">
       <div className="flex gap-4  items-center relative w-full transition-transform ">
         {isOpen?(
           <img src="./images/icon-close.svg" alt=""  className="brightness-0 size-6 transition-transform duration-3"
@@ -38,20 +41,19 @@ export default function Nav(){
             {activeMenu==='explore' &&(
               <div className=" list-none space-y-4 divide-y divide-gray-200">
                 <li >
-                  <a href="" className="flex items-center gap-2"> <PiPathLight className="text-lg"/> LEARNAING PATH</a>
-
+                  <Link className="flex items-center gap-2" to={"/learn-path"}><PiPathLight className="text-lg"/> LEARNAING PATH</Link>
                </li>
                 <li>
-                  <a href=""  className="flex items-center gap-2"> <FaComputer className="text-lg"/>CHALLENGES</a>
+                  <Link className="flex items-center gap-2" to={"/challenge"}><FaComputer className="text-lg"/>CHALLENGES</Link>
                 </li>
                 <li>
-                  <a href=""  className="flex items-center gap-2"> <PiCodeThin className="text-lg"/> SOLUTIONS</a>
+                  <Link className="flex items-center gap-2" to={"/solution"}><PiCodeThin className="text-lg"/> SOLUTIONS</Link>
                 </li>
                 <li>
-                  <a href="" className="flex items-center gap-2">A<FaNewspaper className="text-lg"/> RICALS</a>
+                  <Link className="flex items-center gap-2" to={"/articles"}><FaNewspaper className="text-lg"/> ARICALS</Link>
                 </li>
                 <li>
-                  <a href="" className="flex items-center gap-2"><FaBook className="text-lg"/>GUIDES</a>
+                  <Link className="flex items-center gap-2" to={"/guides"}><FaBook className="text-lg"/>GUIDES</Link>
                 </li>
               </div>
             )}

@@ -14,6 +14,9 @@ import JoinCard from "../components/JoiningCard";
 import Contact from "../components/Contact";
 import HowItswork from "../components/HowItsWorkFunction";
 import MainButtonFortheTPaymentToggle from "../components/MainButtonForThePaymentToggle";
+import Footer from "../components/Footer";
+
+
 
 
 
@@ -230,27 +233,9 @@ export default function Home(){
       </div>
       <div>{/*Contact container */}
         <Contact/>
-      </div><hr />
+      </div>
       <div className="">{/*footer */}
-        <footer className="space-y-4 ">
-          <span>© Frontend Mentor 2019 - 2026</span>
-          <ul className="flex justify-between text-gray-500">
-            <li>
-              <a href="">Terms</a>
-            </li>
-            <li>
-              <a href="">Cookies Policy</a>
-            </li>
-            <li>
-              <a href="">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="">license</a>
-            </li>
-          </ul>
-        </footer>
-
-
+        <Footer/>
       </div>
 
 
