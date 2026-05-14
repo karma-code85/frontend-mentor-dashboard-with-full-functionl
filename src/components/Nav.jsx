@@ -38,7 +38,7 @@ export default function Nav(){
             <p>EXPLORE</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className={`transition-transform ${activeMenu==='explore' ? 'rotate-90':''} lucide lucide-chevron-right-icon lucide-chevron-right`}><path d="m9 18 6-6-6-6"/></svg>
             </div>
-            {activeMenu==='explore' &&(
+            {activeMenu ==='explore' &&(
               <div className=" list-none space-y-4 divide-y divide-gray-200">
                 <li >
                   <Link className="flex items-center gap-2" to={"/learn-path"}><PiPathLight className="text-lg"/> LEARNAING PATH</Link>
