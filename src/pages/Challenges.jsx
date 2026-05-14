@@ -3,32 +3,46 @@ import Nav from "../components/Nav"
 import LayoutHeroNav from "../components/LayoutForTheHeroNav"
 import Contact from "../components/Contact"
 import { IoCheckmarkOutline } from "react-icons/io5";
-import { Link, Links } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { challenges } from "../dataChallenges";
 import { CiSearch } from "react-icons/ci";
 import { HiOutlineFilter } from "react-icons/hi";
 import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
-
-
-
-
-
-
+import { challenges } from "../dataChallenges";
 
 
 
 export default function Challenges({img, title, id, classRange,technologies,text}){
   const [isFilter, setIsFilter]=useState(false)
+  const [challengeCard, setChallengeCard]=useState(challenges)
+  const [searchTerm, setSearchTerm]=useState("")
 
 
+  const [selectedFilter, setSelectedFilter]=useState({
+    format:[],
+    pricing:[],
+    difficulty:[],
+    status:[],
+    language:[]
+  })
 
+  function handleReset(){
+    setSelectedFilter({
+      format:[],
+      pricing:[],
+      difficulty:[],
+      status:[],
+      language:[]
+    })
+    setSearchTerm("")
+  }
 
-  // const datas={
-  //   Format:["Desing", "Product"],
-  //   Pricing:['Free', 'Free+' ,'Premium'],
-  //   Difficulty:
-  // }
+  const filterChallenges=challenges.filter((challenge)=>{
+    const matchTitle=challenge.title?.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
+
+    return matchTitle
+  })
 
   return(
     <div className="p-4 space-y-4 relative min-h-screen ">
@@ -49,6 +63,8 @@ export default function Challenges({img, title, id, classRange,technologies,text
         <input type="text"
         placeholder="Search challenges....."
         className="outline-none w-full h-full"
+        onChange={(e)=>setSearchTerm(e.target.value)}
+        value={searchTerm}
         />
         <CiSearch className="absolute right-4" />
       </div>
@@ -60,7 +76,7 @@ export default function Challenges({img, title, id, classRange,technologies,text
           <span>new to old</span>
         </div>
         {isFilter && (
-          <div className="h-screen top-0 absolute bottom-0 bg-gray-50 w-[90%] right-0 p-6 shadow-lg  overflow-y-auto "
+          <div className="fixed inset-y-0 right-0 bg-gray-50 w-[90%] md:w-[400px] p-6 shadow-2xl z-50 overflow-y-auto flex flex-col "
           onClick={(e)=>e.stopPropagation()}
           >
             <div className="flex justify-between items-center border-gray-200  border-b-2  ">
@@ -77,7 +93,7 @@ export default function Challenges({img, title, id, classRange,technologies,text
               <h1 className="text-2xl font-semibold">Format</h1>
               {["Desing", "Product"].map((item)=>(
               <div className="flex gap-4 items-center  " key={item}>
-                <input type="checkbox"   className="bg-rose-500 border-blue-800 w-6 h-6 rounded accent-rose-500"/>
+                <input type="checkbox"   className="bg-rose-500 border-blue-800 w-6 h-6 rounded accent-rose-500" />
                 <p className="text-semibold text-2xl group-hover:text-rose-500 " >{item}</p>
               </div>
               ))}
@@ -135,6 +151,33 @@ export default function Challenges({img, title, id, classRange,technologies,text
       <div className="flex justify-between text-sm">
         <span className="text-neutral-500">Showing 127 of 127 challenges </span> <span className="text-blue-800 underline">Try our learn path</span>
       </div>
+      {/* <div className="shadow-xl rounded pb-8 p-4"> */}
+     {challengeCard.map((challenge)=>(
+      <div key={challenge.id} className="space-y-8 bg-white rounded shadow-xl mb-4 ">
+        <img src={`/images/imagesChallenge/${challenge.img}`} alt={challenge.title}  className="rounded-t-lg object-cover "/>
+        <div className="space-y-6 p-4">
+          <h1>{challenge.title}</h1>
+          <div >
+            <div className="flex justify-between">
+            <div className="flex gap-3">
+              {challenge.technologies.map((tech, index)=>(
+                <ul key={index}>
+                  <li>{tech}</li>
+
+                </ul>
+              ))}
+            </div>
+          <h1>{challenge.classRange}</h1>
+            </div>
+
+          <p>{challenge.text}</p>
+          </div>
+
+        </div>
+
+      </div>
+     ))}
+      {/* </div> */}
       <Contact/>
       <Footer/>
     </div>

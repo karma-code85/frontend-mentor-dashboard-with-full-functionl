@@ -60,7 +60,7 @@ export const challenges=[
     title:"Bookmark manager app",
     classRange:"",
     img:"hxtjlnh6jlppaxg4uqsf.webp",
-    technologies:"",
+    technologies:[],
     text:"Build a fully-functional bookmark manager with add, edit, archive, search, and filter features. Perfect for practicing forms and state management.",
   },
   {
