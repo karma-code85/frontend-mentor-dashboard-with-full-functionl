@@ -1,5 +1,8 @@
 import { FaDiscord ,FaLinkedin,FaFacebook } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+// import ProPage from "../pages/Pro";
+
 
 
 
@@ -33,19 +36,20 @@ export default function Contact(){
         <h1 className="font-bold text-xl ">FRONTEND MENTOR</h1>
         <ul className="text-gray-500 space-y-2">
           <li>
-            <a href="">Unlock Pro</a>
+            <Link to={"/pro"} >Unlock Pro</Link>
           </li>
           <li>
-            <a href="">Contact us</a>
+            <Link to={"/contact"}>Contact us</Link>
+
           </li>
           <li>
-            <a href="">FAQs</a>
+            <Link to={"/faqs"}>FAQs</Link>
           </li>
           <li>
-            <a href="">Become a partner</a>
+            <Link to={"/become-a-partner"}>Become a partner</Link>
           </li>
           <li>
-            <a href="">Use case</a>
+            <Link to={"/use-case"}>Use case</Link>
           </li>
         </ul>
       </div>
@@ -55,19 +59,19 @@ export default function Contact(){
         <h1 className="font-bold text-xl ">EXPLORE</h1>
         <ul className="text-gray-500 space-y-2">
           <li>
-            <a href="">Learning path</a>
+            <Link to={"/learn-path"} ele>Learning path</Link>
           </li>
           <li>
-            <a href="">Challenges</a>
+            <Link to={"/challenge"}>Challenges</Link>
           </li>
           <li>
-            <a href="">Solutions</a>
+            <Link to={"/solutions"}>Solutions</Link>
           </li>
           <li>
-            <a href="">Articals</a>
+            <Link to={"/articals"}>Articals</Link>
           </li>
           <li>
-            <a href="">Guides</a>
+            <Link to={"/guides"}>Guides</Link>
           </li>
         </ul>
       </div>
@@ -76,10 +80,10 @@ export default function Contact(){
         <h1 className="font-bold text-xl ">Community</h1>
         <ul className="text-gray-500 space-y-2">
           <li>
-            <a href="">Discord</a>
+            <Link to={"/discord"}>Discord</Link>
           </li>
           <li>
-            <a href="">Guidelines</a>
+            <Link to={"guidelines"}>Guidelines</Link>
           </li>
 
         </ul>
@@ -90,10 +94,10 @@ export default function Contact(){
         <h1 className="font-bold text-xl ">For Companies</h1>
         <ul className="text-gray-500 space-y-2">
           <li>
-            <a href="">Hire develpers</a>
+            <Link to={"hire-developer"}>Hire develpers</Link>
           </li>
           <li>
-            <a href="">Train developer</a>
+            <Link to={"trin-developr"}>Train developer</Link>
           </li>
 
         </ul>
