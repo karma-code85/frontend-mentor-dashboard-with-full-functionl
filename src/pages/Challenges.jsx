@@ -163,7 +163,6 @@ export default function Challenges({img, title, id, classRange,technologies,text
               {challenge.technologies.map((tech, index)=>(
                 <ul key={index}>
                   <li>{tech}</li>
-
                 </ul>
               ))}
             </div>

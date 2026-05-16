@@ -6,9 +6,9 @@ import { solutionData } from "../dataSolution";
 
 export default function SolutionCardComponent({url, title, profile, username,submittedDate,paragrph, comments,point,likes}){
   return(
-    <div className=" shadow rounded-lg  w-full  ">
+    <div className=" shadow rounded-lg  w-full space-y-6 bg-white   ">
       {solutionData.map((data)=>(
-        <div key={data} className="space-y-6 ">
+      <div key={data} className=" ">
       <img src={`/images/imagesSolutions/${data.url}`} alt="" className="rounded-t-lg object-cover" />
       <div className="divide-y space-y-6">
       <h1>{data.title}</h1>

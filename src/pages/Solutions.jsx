@@ -17,7 +17,7 @@ export default function SolutionPage(){
     <div className="p-4 space-y-6 ">
       <Nav/>
       <LayoutHeroNav path={"Solutions"} tagsone={"solution"} tagstwo={"tags"} tagsthree={"wall of far"}/>
-      <div className="bg-white shadow-lg p-3 rounded flex justify-between w-1/2 border items-center relative "
+      <div className="bg-white shadow-lg p-3 rounded flex justify-between w-1/2 border items-center relative  "
       onClick={()=>setIsRequested(!isRequested)}
       >
         Feedback requested
@@ -32,7 +32,7 @@ export default function SolutionPage(){
           </div>
         )}
       </div>
-        <SolutionCardComponent/>
+        <SolutionCardComponent/>ƒ
       <Contact/>
       <Footer/>
 
