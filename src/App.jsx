@@ -5,6 +5,9 @@ import Challenges from "./pages/Challenges";
 import SolutionPage from "./pages/Solutions";
 import ArticalPage from "./pages/Artical";
 import GuidesPage from "./pages/Guides";
+import TrianPage from "./pages/TrainTeam";
+import ProPage from "./pages/Pro";
+
 
 
 
@@ -18,7 +21,9 @@ export default function App(){
         <Route path="/challenge" element={<Challenges/>}/>
         <Route path="/solution" element={<SolutionPage/>}/>
         <Route path="/articles" element={<ArticalPage/>}/>
-        <Route path="guides" element={<GuidesPage/>}/>
+        <Route path="/guides" element={<GuidesPage/>}/>
+        <Route path="/team" element={<TrianPage/>}/>
+        <Route path="/pro" element={<ProPage/>}/>
 
     </Routes>
   )

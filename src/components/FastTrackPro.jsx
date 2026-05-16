@@ -4,7 +4,6 @@ export default function FastTrack({icon, title, paragraph}){
       <div className="p-2 rounded-lg bg-blue-100  text-blue-800 w-1/4 text-center">{icon}</div>
       <h1 className="text-xl font-semibold">{title}</h1>
       <p>{paragraph}</p>
-
     </div>
   )
 }

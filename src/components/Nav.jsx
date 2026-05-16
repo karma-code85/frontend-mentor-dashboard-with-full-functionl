@@ -20,7 +20,7 @@ export default function Nav(){
 
 
   return(
-    <div className="flex justify-between p-4 ">
+    <div className="flex justify-between p-4 relative">
       <div className="flex gap-4  items-center relative w-full transition-transform ">
         {isOpen?(
           <img src="./images/icon-close.svg" alt=""  className="brightness-0 size-6 transition-transform duration-3"
@@ -31,7 +31,7 @@ export default function Nav(){
         )}
 
 
-        <div className="absolute  top-full w-full z-20 mt-4 w-full cursor-pointer">
+        <div className="absolute  top-full w-full z-20 mt-4 w-full cursor-pointer ">
         {isOpen &&(
           <div className=" bg-white shadow-lg p-4 space-y-4  divide-y divide-gray-300  ">
             <div className="flex justify-between items-center" onClick={()=>handletoggleMenu('explore')}>
@@ -65,15 +65,16 @@ export default function Nav(){
             {activeMenu==='for companies' &&(
               <div className="list-none space-y-4 divide-y divide-gray-200 ">
                 <li>
-                  <a href="" className="flex items-center gap-2"><FaUserTie />HIRE DEVELOPERS</a>
+                  <Link className="flex items-center gap-2" to={"/individual"}><FaUserTie />HIRE DEVELOPERS</Link>
                 </li>
                 <li>
-                  <a href="" className="flex items-center gap-2"><FaUserGraduate/>TRAIN DEVELOPERS</a>
+                  <Link className="flex items-center gap-2" to={"/team"}><FaUserGraduate/>TRAIN DEVELOPERS</Link>
                 </li>
               </div>
             )}
-            <p className="flex items-center gap-2 mt-4"> <a href="" className="flex items-center gap-2"> <IoLockOpenOutline/>UNLOCK <span className=" font-bold text-white rounded px-2 py-1 bg-blue-800">PRO</span></a></p>
-
+            <p className="flex items-center gap-2 mt-4">
+              <Link to={"/pro"} className="flex items-center gap-2"><IoLockOpenOutline/>UNLOCK <span className=" font-bold text-white rounded px-2 py-1 bg-blue-800">PRO</span></Link>
+               </p>
           </div>
         )}
         </div>
