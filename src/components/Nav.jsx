@@ -75,10 +75,15 @@ export default function Nav(){
             <p className="flex items-center gap-2 mt-4">
               <Link to={"/pro"} className="flex items-center gap-2"><IoLockOpenOutline/>UNLOCK <span className=" font-bold text-white rounded px-2 py-1 bg-blue-800">PRO</span></Link>
                </p>
+
           </div>
         )}
         </div>
-        <img src="./images/favicon-32x32.png" alt="" />
+        <div className="md:flex md:itesm-center  gap-4">
+        <img src="./images/favicon-32x32.png" alt=""  className=""/>
+        <h1 className="hidden md:flex text-2xl ">Frontend Mentor</h1>
+
+        </div>
       </div>
       <button className="bg-black p-2 rounded-full text-white font-bold text-sm w-1/2 flex justify-center ">
        <a href="https://www.frontendmentor.io/home" className="flex gap-4 items-center justify-center"> LOG IN <FaGithub/></a>
