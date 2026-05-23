@@ -15,7 +15,7 @@ import ProPage from "./pages/Pro";
 
 export default function App(){
   return(
-    <Routes>
+    <Routes >
         <Route path="/" element={<Home/>}/>
         <Route path="/learn-path" element={<LearnPath/>}/>
         <Route path="/challenge" element={<Challenges/>}/>
