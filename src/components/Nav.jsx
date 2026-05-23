@@ -20,26 +20,27 @@ export default function Nav(){
 
 
   return(
-    <div className="flex justify-between p-4 relative">
-      <div className="flex gap-4  items-center relative w-full transition-transform ">
+    <div className="flex justify-between p-4 relative items-center container-full">
+      <div className="flex gap-4  relative items-center transition-transform  lg:w-1/4 ">
         {isOpen?(
-          <img src="./images/icon-close.svg" alt=""  className="brightness-0 size-6 transition-transform duration-3"
+          <img src="./images/icon-close.svg" alt=""  className="brightness-0 size-6 transition-transform duration-3 lg:hidden"
           onClick={()=>setIsOpen(false)}
           />
         ):(
-          <img src="./images/icon-menu.svg" alt="" className="brightness-0 size-6 cursor-pointer transition-transform" onClick={()=>setIsOpen(!isOpen)}/>
+          <img src="./images/icon-menu.svg" alt="" className="brightness-0 size-6 cursor-pointer transition-transform lg:hidden" onClick={()=>setIsOpen(!isOpen)}/>
         )}
 
 
-        <div className="absolute  top-full w-full z-20 mt-4 w-full cursor-pointer ">
+        <div className="absolute  top-full w-full z-20 mt-4 w-full cursor-pointer bg-rose-500">
         {isOpen &&(
-          <div className=" bg-white shadow-lg p-4 space-y-4  divide-y divide-gray-300  ">
+          <div className=" bg-white shadow-lg p-4 space-y-4  divide-y divide-gray-300  w-full  bg-rose-500 z-50">
             <div className="flex justify-between items-center" onClick={()=>handletoggleMenu('explore')}>
             <p>EXPLORE</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className={`transition-transform ${activeMenu==='explore' ? 'rotate-90':''} lucide lucide-chevron-right-icon lucide-chevron-right`}><path d="m9 18 6-6-6-6"/></svg>
             </div>
+
             {activeMenu ==='explore' &&(
-              <div className=" list-none space-y-4 divide-y divide-gray-200">
+              <div className=" list-none space-y-4 divide-y divide-gray-200 ">
                 <li >
                   <Link className="flex items-center gap-2" to={"/learn-path"}><PiPathLight className="text-lg"/> LEARNAING PATH</Link>
                </li>
@@ -72,6 +73,7 @@ export default function Nav(){
                 </li>
               </div>
             )}
+
             <p className="flex items-center gap-2 mt-4">
               <Link to={"/pro"} className="flex items-center gap-2"><IoLockOpenOutline/>UNLOCK <span className=" font-bold text-white rounded px-2 py-1 bg-blue-800">PRO</span></Link>
                </p>
@@ -81,13 +83,22 @@ export default function Nav(){
         </div>
         <div className="md:flex md:itesm-center  gap-4">
         <img src="./images/favicon-32x32.png" alt=""  className=""/>
-        <h1 className="hidden md:flex text-2xl ">Frontend Mentor</h1>
+        <h1 className="hidden lg:flex text-2xl ">Frontend Mentor</h1>
 
         </div>
       </div>
-      <button className="bg-black p-2 rounded-full text-white font-bold text-sm w-1/2 flex justify-center ">
+        <div className="lg:flex w-1/2 justify-between ">
+        <ul className="hidden lg:flex justify-center items-center gap-4 cursor-pointer  ">
+          <li onClick={()=>handletoggleMenu('explore')} >EXPLORE</li>
+          <li>FOR COMPANIES</li>
+          <li>UNLOCK <span className=" font-bold text-white rounded px-2 py-1 bg-blue-800">PRO</span></li>
+
+        </ul>
+      <button className="bg-black p-2 rounded-full text-white font-bold text-sm  text-center flex justify-center  w-full lg:w-1/4">
        <a href="https://www.frontendmentor.io/home" className="flex gap-4 items-center justify-center"> LOG IN <FaGithub/></a>
       </button>
-    </div>
+        </div>
+
+      </div>
   )
 }
