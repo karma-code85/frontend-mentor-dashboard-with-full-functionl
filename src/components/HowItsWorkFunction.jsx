@@ -33,11 +33,11 @@ export default function HowItswork(){
     }
   ]
   return(
-    <div className="space-y-4">
-      <img src={`/images/${steps[isActive].image}`} alt="" />
-      <div  className="space-y-4">
+    <div className="space-y-4 lg:flex  gap-4 lg:flex-row-reverse">
+      <img src={`/images/${steps[isActive].image}`} alt=""  className="lg:w-1/2"/>
+      <div  className="space-y-4 lg:w-1/2 order-0">
         {steps.map((step,index)=>(
-          <div key={step.id} className={`transition-transform  p-4 rounded-lg border border-1 shadow  ${isActive===index ?
+          <div key={step.id} className={`transition-transform  p-4 rounded-lg border border-1 shadow lg:p-8  ${isActive===index ?
             "bg-blue-900 text-white":"bg-white"
           }`}
           onClick={()=>setIsActive(index)}

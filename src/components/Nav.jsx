@@ -82,7 +82,7 @@ export default function Nav(){
           </div>
         )}
         </div>
-        <div className="md:flex md:itesm-center  gap-4">
+        <div className="md:flex md:items-center  gap-4 cursor-pointer">
         <img src="./images/favicon-32x32.png" alt=""  className=""/>
         <h1 className="hidden lg:flex text-2xl ">Frontend Mentor</h1>
 

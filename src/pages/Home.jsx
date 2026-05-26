@@ -57,12 +57,17 @@ export default function Home(){
         <img src="/images/home-hero.webp" alt="desktop code editor image"  className="object-cover"/>
       </div>
       </div>
-      <div className="rounded-lg p-4 space-y-6 bg-blue-900">{/*for the blue container under edtior img */}
+      <div className="rounded-lg p-4 space-y-6 bg-blue-900 md:flex md:justify-between gap-2">{/*for the blue container under edtior img */}
+        <div className="p-4 space-y-6">
         <h1 className="font-bold text-white">Get AI-powered feedback on every solution submission</h1>
         <p className="text-gray-400">Join thousands of developers getting personalized insights with every submission to level up faster. </p>
-        <button className="bg-white p-2 rounded-full text-blue-800 text-center w-full"><a href="https://www.frontendmentor.io/pro">LEARN ABOUT PRO</a></button>
+        </div>
+        <div className="w-[30%] flex items-center justify-center">
+        <button className="bg-white p-2 text-sm  font-bold rounded-full text-blue-800 text-center w-full"><a href="https://www.frontendmentor.io/pro">LEARN ABOUT PRO</a></button>
+        </div>
       </div>
-      <div>{/*the youtuber container */}
+      <div className="lg:flex gap-4 flex flex-col lg:flex-row p-2" >{/*the youtuber container */}
+      <div >
         <Youtube text={"I highly recommend Frontend Mentor. Skip the search for project ideas and dive into ready-made challenges that help you level up as a developer."}
         url="/images/image-avatar.png"
         name={"Kevin Powell"}
@@ -76,8 +81,9 @@ export default function Home(){
         jop={"Web Developer & YouTuber"}
         />
       </div>
+      </div>
       <p className="text-center font-extrabold text-lg ">AS FEATURED ON ....</p>
-      <div className="space-y-6">
+      <div className=" md:flex justify-between gap-4 flex flex-col md:flex-row">
         <Company url={"/images/logo-css-tricks.svg"} link={"https://css-tricks.com/front-end-challenges/"} />
         <Company url={"/images/logo-stack-overflow.svg"} link={"https://stackoverflow.blog/2021/04/30/podcast-334-a-curious-journey-from-personal-trainer-to-frontend-mentor/"}/>
         <Company url={"/images/logo-product-hunt.svg" } link={"https://www.producthunt.com/products/frontend-mentor"}/>
@@ -87,8 +93,8 @@ export default function Home(){
 
         <HowItswork/>
       </div>
-      <div className="space-y-8">{/*for the why developer like frontend mentor */}
-        <h1 className="text-center text-3xl text-sm ">Why developers choose Frontend Mentor</h1>
+      <div className=" gap-6 flex flex-col justify-center">{/*for the why developer like frontend mentor */}
+        <h1 className="text-center text-3xl   ">Why developers choose Frontend Mentor</h1>
         <DeveloperLikeFrontend
         url={"/images/home-why-1111.webp"}
         head={"Move beyond passive learning"}

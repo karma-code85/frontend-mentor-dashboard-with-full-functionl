@@ -3,7 +3,7 @@ import { FaQuoteRight } from "react-icons/fa";
 
 export default function Youtube({text , url , name, jop}){
   return(
-    <div className="p-4 rounded-lg bg-white shadow-lg border space-y-6">
+    <div className="p-4 md:p-8 rounded-lg bg-white shadow-lg border space-y-6">
       <p>{text}</p>
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
