@@ -1,4 +1,4 @@
-import { FaDiscord ,FaLinkedin,FaFacebook } from "react-icons/fa";
+import { FaDiscord, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 // import ProPage from "../pages/Pro";

@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom";
+import ArticalPage from "./pages/Artical";
+import Challenges from "./pages/Challenges";
+import GuidesPage from "./pages/Guides";
 import Home from "./pages/Home";
 import LearnPath from "./pages/LearnPathPage";
-import Challenges from "./pages/Challenges";
-import SolutionPage from "./pages/Solutions";
-import ArticalPage from "./pages/Artical";
-import GuidesPage from "./pages/Guides";
-import TrianPage from "./pages/TrainTeam";
 import ProPage from "./pages/Pro";
+import SolutionPage from "./pages/Solutions";
+import TrianPage from "./pages/TrainTeam";
 
 
 
@@ -24,7 +24,6 @@ export default function App(){
         <Route path="/guides" element={<GuidesPage/>}/>
         <Route path="/team" element={<TrianPage/>}/>
         <Route path="/pro" element={<ProPage/>}/>
-
     </Routes>
   )
 }

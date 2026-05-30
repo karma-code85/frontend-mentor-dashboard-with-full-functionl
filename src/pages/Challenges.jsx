@@ -1,13 +1,13 @@
-import Footer from "../components/Footer"
-import Nav from "../components/Nav"
-import LayoutHeroNav from "../components/LayoutForTheHeroNav"
-import Contact from "../components/Contact"
 import { IoCheckmarkOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
+import LayoutHeroNav from "../components/LayoutForTheHeroNav";
+import Nav from "../components/Nav";
 // import { challenges } from "../dataChallenges";
+import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { HiOutlineFilter } from "react-icons/hi";
-import { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { challenges } from "../dataChallenges";
 
@@ -15,7 +15,7 @@ import { challenges } from "../dataChallenges";
 
 export default function Challenges({img, title, id, classRange,technologies,text}){
   const [isFilter, setIsFilter]=useState(false)
-  const [challengeCard, setChallengeCard]=useState(challenges)
+  const [challengeCard]=useState(challenges)
   const [searchTerm, setSearchTerm]=useState("")
 
 

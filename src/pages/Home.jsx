@@ -1,20 +1,19 @@
 import { useState } from "react";
-import Nav from "../components/Nav";
-import { FaBook, FaCode, FaRegComment, FaGithub ,FaArrowCircleRight,FaArrowCircleLeft } from "react-icons/fa";
-import Youtube from "../components/Youtuber";
+import { FaArrowCircleLeft, FaArrowCircleRight, FaBook, FaCode, FaGithub, FaRegComment } from "react-icons/fa";
 import Company from "../components/CompanyAddress";
-import SummaryDeailes from "../components/SummaryDetails";
 import DeveloperLikeFrontend from "../components/DevelperLikeFrontend";
 import FastTrack from "../components/FastTrackPro";
+import Nav from "../components/Nav";
+import Youtube from "../components/Youtuber";
 // import Payment from "./components/paymentSubscrbation";
 import CardFroPayment from "../components/CardForPayment";
-import ForCompainesCard from "../components/ForCompainesCard";
 import CommunityTitle from "../components/CommunityTitle";
-import JoinCard from "../components/JoiningCard";
 import Contact from "../components/Contact";
-import HowItswork from "../components/HowItsWorkFunction";
-import MainButtonFortheTPaymentToggle from "../components/MainButtonForThePaymentToggle";
 import Footer from "../components/Footer";
+import ForCompainesCard from "../components/ForCompainesCard";
+import HowItswork from "../components/HowItsWorkFunction";
+import JoinCard from "../components/JoiningCard";
+import MainButtonFortheTPaymentToggle from "../components/MainButtonForThePaymentToggle";
 
 
 

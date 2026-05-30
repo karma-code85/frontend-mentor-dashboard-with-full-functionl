@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { IoMdMenu ,IoMdClose} from "react-icons/io";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
-import { MdOutlineQuestionMark } from "react-icons/md";
-import { CiSearch } from "react-icons/ci";
-import { TbCurrencyDollar } from "react-icons/tb";
 import { BiMessage } from "react-icons/bi";
+import { CiSearch } from "react-icons/ci";
 import { FaUserTie } from "react-icons/fa";
 import { GoSignOut } from "react-icons/go";
+import { IoMdClose, IoMdMenu } from "react-icons/io";
+import { MdOutlineQuestionMark } from "react-icons/md";
+import { TbCurrencyDollar } from "react-icons/tb";
+import { Link } from "react-router-dom";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 import HowItswork from "../components/HowItsWorkFunction";
 
 

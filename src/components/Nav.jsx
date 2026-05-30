@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { FaGithub ,FaUserTie,FaUserGraduate} from "react-icons/fa";
-import { PiPathLight ,PiCodeThin} from "react-icons/pi";
-import { FaComputer,FaNewspaper,FaBook } from "react-icons/fa6";
+import { FaGithub, FaUserGraduate, FaUserTie } from "react-icons/fa";
+import { FaBook, FaComputer, FaNewspaper } from "react-icons/fa6";
 import { IoLockOpenOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
-import LearnPath from "../pages/LearnPathPage";
+import { PiCodeThin, PiPathLight } from "react-icons/pi";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 
 

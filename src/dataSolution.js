@@ -1,5 +1,5 @@
 export const solutionData=[
- 
+
   {
     id:1,
     title:"Time tracking dashboard using HTML, CSS and JavaScript",
