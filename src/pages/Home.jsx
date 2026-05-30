@@ -21,17 +21,17 @@ import MainButtonFortheTPaymentToggle from "../components/MainButtonForThePaymen
 
 
 export default function Home(){
-  // const [isOpen , setIsOpen]=useState(false)
-  const [imageOpen, setImageOpen]=useState(1)
-  const [ActivePayment, setActivePayment]=useState(null)
+
+  // const [imageOpen, setImageOpen]=useState(1)
+  // const [ActivePayment, setActivePayment]=useState(null)
 
 
-  const images=["home-how-it-works-3.webp","home-how-it-works-4 (1).webp","home-how-it-works-3.webp", "home-how-it-works-4 (1).webp"]
+  // const images=["home-how-it-works-3.webp","home-how-it-works-4 (1).webp","home-how-it-works-3.webp", "home-how-it-works-4 (1).webp"]
 
 
-   function handleToggledPayment(cardShow){
-    setActivePayment(ActivePayment===cardShow?null :cardShow)
-  }
+  //  function handleToggledPayment(cardShow){
+  //   setActivePayment(ActivePayment===cardShow?null :cardShow)
+  // }
 
 
 
@@ -53,7 +53,7 @@ export default function Home(){
       </div>
         </div>
       <div className="object-cover">
-        <img src="/images/home-hero.webp" alt="desktop code editor image"  className="object-cover"/>
+        <img src="/images/home-hero.webp" alt="Desktop code editor"  className="object-cover"/>
       </div>
       </div>
       <div className="rounded-lg p-4 space-y-6 bg-blue-900 md:flex md:justify-between gap-2">{/*for the blue container under edtior img */}

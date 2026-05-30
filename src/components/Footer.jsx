@@ -5,16 +5,20 @@ export default function Footer(){
           <span>© Frontend Mentor 2019 - 2026</span>
           <ul className="flex justify-between text-gray-500">
             <li>
-              <a href="">Terms</a>
+              
+              <button>Terms</button>
             </li>
             <li>
-              <a href="">Cookies Policy</a>
+
+              <button>Cookies Policy</button>
             </li>
             <li>
-              <a href="">Privacy Policy</a>
+
+              <button>Privacy Policy</button>
             </li>
             <li>
-              <a href="">license</a>
+
+              <button>license</button>
             </li>
           </ul>
         </footer>

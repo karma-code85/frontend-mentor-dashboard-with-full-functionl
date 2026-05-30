@@ -19,30 +19,30 @@ export default function Challenges({img, title, id, classRange,technologies,text
   const [searchTerm, setSearchTerm]=useState("")
 
 
-  const [selectedFilter, setSelectedFilter]=useState({
-    format:[],
-    pricing:[],
-    difficulty:[],
-    status:[],
-    language:[]
-  })
+  // const [ setSelectedFilter]=useState({
+  //   format:[],
+  //   pricing:[],
+  //   difficulty:[],
+  //   status:[],
+  //   language:[]
+  // })
 
-  function handleReset(){
-    setSelectedFilter({
-      format:[],
-      pricing:[],
-      difficulty:[],
-      status:[],
-      language:[]
-    })
-    setSearchTerm("")
-  }
+  // function handleReset(){
+  //   setSelectedFilter({
+  //     format:[],
+  //     pricing:[],
+  //     difficulty:[],
+  //     status:[],
+  //     language:[]
+  //   })
+  //   setSearchTerm("")
+  // }
 
-  const filterChallenges=challenges.filter((challenge)=>{
-    const matchTitle=challenge.title?.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
+  // const filterChallenges=challenges.filter((challenge)=>{
+  //   const matchTitle=challenge.title?.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase())
 
-    return matchTitle
-  })
+  //   return matchTitle
+  // })
 
   return(
     <div className="p-4 space-y-4 relative min-h-screen ">

@@ -33,6 +33,8 @@ export default function ProPage(){
               paragraph={"Learn to translate Figma designs into pixel-perfect code using the same detailed specs and professional workflow that developers use in real teams."}
               />
             </div>
+            <Contact/>
+            <Footer/>
 
     </div>
   )
